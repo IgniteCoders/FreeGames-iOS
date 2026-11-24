@@ -16,39 +16,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="309" estimatedRowHeight="309" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WCZ-ti-udP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WCZ-ti-udP">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Game Cell" rowHeight="309" id="PYn-H1-DM6" customClass="GameViewCell" customModule="FreeGames" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="309"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Game Cell" rowHeight="378" id="PYn-H1-DM6" customClass="GameViewCell" customModule="FreeGames" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="378"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PYn-H1-DM6" id="M8V-I9-PMo">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="309"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="378"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Fl-ng-2kV" userLabel="Card View">
-                                                    <rect key="frame" x="16" y="15" width="361" height="279"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aP-Sz-GvH" userLabel="Card Shadow View">
+                                                    <rect key="frame" x="16" y="15" width="361" height="348"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Fl-ng-2kV" userLabel="Card View">
+                                                    <rect key="frame" x="16" y="15" width="361" height="348"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5tD-95-4PB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361" height="240"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.artframe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5tD-95-4PB">
+                                                            <rect key="frame" x="0.0" y="1.3333333333333286" width="361" height="200.66666666666669"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="5tD-95-4PB" secondAttribute="height" multiplier="16:9" id="aPz-Rn-08S"/>
+                                                            </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTg-Sl-JSz">
-                                                            <rect key="frame" x="8" y="248" width="345" height="23"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTg-Sl-JSz">
+                                                            <rect key="frame" x="8" y="211" width="345" height="24"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDN-kR-GNI">
+                                                            <rect key="frame" x="8" y="243" width="345" height="61"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desktopcomputer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jgD-Ow-QQV">
+                                                            <rect key="frame" x="325" y="312.66666666666669" width="28" height="27.333333333333314"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="28" id="3ce-S5-brW"/>
+                                                                <constraint firstAttribute="width" constant="28" id="eJd-Mg-2vq"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ctx-la-iI3" userLabel="Genre View">
+                                                            <rect key="frame" x="8" y="312" width="65.333333333333329" height="29"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxH-t6-N68">
+                                                                    <rect key="frame" x="8.0000000000000036" y="4" width="49.333333333333343" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="tintColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="sxH-t6-N68" firstAttribute="leading" secondItem="Ctx-la-iI3" secondAttribute="leading" constant="8" id="VXs-KN-vXo"/>
+                                                                <constraint firstAttribute="trailing" secondItem="sxH-t6-N68" secondAttribute="trailing" constant="8" id="YBL-qe-Xxe"/>
+                                                                <constraint firstAttribute="bottom" secondItem="sxH-t6-N68" secondAttribute="bottom" constant="4" id="bS0-gP-t6V"/>
+                                                                <constraint firstItem="sxH-t6-N68" firstAttribute="top" secondItem="Ctx-la-iI3" secondAttribute="top" constant="4" id="dWe-7b-Hei"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="5tD-95-4PB" firstAttribute="top" secondItem="2Fl-ng-2kV" secondAttribute="top" id="9fl-VC-wzU"/>
+                                                        <constraint firstItem="nDN-kR-GNI" firstAttribute="leading" secondItem="2Fl-ng-2kV" secondAttribute="leading" constant="8" id="FmM-FB-gLY"/>
+                                                        <constraint firstItem="Ctx-la-iI3" firstAttribute="top" secondItem="nDN-kR-GNI" secondAttribute="bottom" constant="8" symbolic="YES" id="OLT-o7-6lQ"/>
+                                                        <constraint firstItem="mTg-Sl-JSz" firstAttribute="leading" secondItem="2Fl-ng-2kV" secondAttribute="leading" constant="8" id="QYH-gG-MTI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mTg-Sl-JSz" secondAttribute="trailing" constant="8" id="THC-Lb-Jrp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jgD-Ow-QQV" secondAttribute="trailing" constant="8" id="bCV-WQ-dOE"/>
+                                                        <constraint firstItem="Ctx-la-iI3" firstAttribute="leading" secondItem="2Fl-ng-2kV" secondAttribute="leading" constant="8" id="c06-5h-wFb"/>
+                                                        <constraint firstItem="mTg-Sl-JSz" firstAttribute="top" secondItem="5tD-95-4PB" secondAttribute="bottom" constant="8" symbolic="YES" id="ccQ-PT-U8e"/>
+                                                        <constraint firstItem="5tD-95-4PB" firstAttribute="leading" secondItem="2Fl-ng-2kV" secondAttribute="leading" id="d5w-xx-UEk"/>
+                                                        <constraint firstItem="jgD-Ow-QQV" firstAttribute="top" secondItem="nDN-kR-GNI" secondAttribute="bottom" constant="8" id="dHl-ti-AwH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="nDN-kR-GNI" secondAttribute="trailing" constant="8" id="evh-Eo-bGx"/>
+                                                        <constraint firstAttribute="bottom" secondItem="jgD-Ow-QQV" secondAttribute="bottom" constant="8" id="k6U-yj-TZW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5tD-95-4PB" secondAttribute="trailing" id="nER-CK-Olk"/>
+                                                        <constraint firstItem="nDN-kR-GNI" firstAttribute="top" secondItem="mTg-Sl-JSz" secondAttribute="bottom" constant="8" symbolic="YES" id="p0E-Lx-Kcd"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2Fl-ng-2kV" firstAttribute="trailing" secondItem="2aP-Sz-GvH" secondAttribute="trailing" id="GCJ-Yd-1Kx"/>
+                                                <constraint firstItem="2Fl-ng-2kV" firstAttribute="top" secondItem="M8V-I9-PMo" secondAttribute="top" constant="15" id="JY0-LY-p7E"/>
+                                                <constraint firstItem="2Fl-ng-2kV" firstAttribute="leading" secondItem="2aP-Sz-GvH" secondAttribute="leading" id="P2k-kV-zvr"/>
+                                                <constraint firstAttribute="trailing" secondItem="2Fl-ng-2kV" secondAttribute="trailing" constant="16" id="ZyZ-wa-wzv"/>
+                                                <constraint firstItem="2Fl-ng-2kV" firstAttribute="leading" secondItem="M8V-I9-PMo" secondAttribute="leading" constant="16" id="dDY-ki-LdH"/>
+                                                <constraint firstAttribute="bottom" secondItem="2Fl-ng-2kV" secondAttribute="bottom" constant="15" id="hVL-kG-tdT"/>
+                                                <constraint firstItem="2Fl-ng-2kV" firstAttribute="top" secondItem="2aP-Sz-GvH" secondAttribute="top" id="kfy-is-S5j"/>
+                                                <constraint firstItem="2Fl-ng-2kV" firstAttribute="bottom" secondItem="2aP-Sz-GvH" secondAttribute="bottom" id="oCf-Vx-NWB"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cardShadowView" destination="2aP-Sz-GvH" id="E2u-aM-jnr"/>
                                             <outlet property="cardView" destination="2Fl-ng-2kV" id="Fd0-Eb-z8G"/>
+                                            <outlet property="descriptionLabel" destination="nDN-kR-GNI" id="pf2-B8-Bhg"/>
+                                            <outlet property="genreLabel" destination="sxH-t6-N68" id="9It-M9-3qX"/>
+                                            <outlet property="genreView" destination="Ctx-la-iI3" id="vOn-Et-zvc"/>
+                                            <outlet property="platformImage" destination="jgD-Ow-QQV" id="Bsf-mi-Nx1"/>
                                             <outlet property="thumbnailImageView" destination="5tD-95-4PB" id="W7u-Pq-qMC"/>
                                             <outlet property="titleLabel" destination="mTg-Sl-JSz" id="Eyo-MP-Ocx"/>
                                         </connections>
@@ -74,10 +139,18 @@
             <point key="canvasLocation" x="-127.48091603053435" y="60.563380281690144"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="systemPurpleColor"/>
     <resources>
+        <image name="desktopcomputer" catalog="system" width="128" height="104"/>
         <image name="photo.artframe" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.79607843140000001" green="0.18823529410000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.53333333329999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
