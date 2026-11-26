@@ -27,6 +27,7 @@ class FreeToGameApi {
             return try JSONDecoder().decode([Game].self, from: data)
         } catch {
             print("Invalid data")
+            print(error)
             return []
         }
     }
