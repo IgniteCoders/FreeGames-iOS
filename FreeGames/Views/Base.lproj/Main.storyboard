@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25408" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25408" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zR2-hO-1oy">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25407"/>
@@ -8,10 +8,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Settings-->
+        <scene sceneID="mBV-kC-CsX">
+            <objects>
+                <viewController id="V7b-ud-fE3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ixc-cv-iOg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bMA-X6-irK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="mqq-Fj-VQ2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iW8-kP-Gvn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="-683"/>
+        </scene>
+        <!--Brows free games-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FreeGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="FreeGames" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,6 +132,7 @@
                                             <outlet property="platformImage" destination="jgD-Ow-QQV" id="Bsf-mi-Nx1"/>
                                             <outlet property="thumbnailImageView" destination="5tD-95-4PB" id="W7u-Pq-qMC"/>
                                             <outlet property="titleLabel" destination="mTg-Sl-JSz" id="Eyo-MP-Ocx"/>
+                                            <segue destination="nAd-en-Qdh" kind="show" identifier="goToDetail" id="mv2-YQ-ZUO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -130,11 +147,82 @@
                             <constraint firstItem="WCZ-ti-udP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gBc-Dc-RbD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Brows free games" id="BVN-Rn-CQZ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape" catalog="system" id="uoP-bi-gqy">
+                            <connections>
+                                <segue destination="V7b-ud-fE3" kind="show" identifier="goToSettings" id="e1j-4p-ofn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="WCZ-ti-udP" id="vcZ-HR-lL7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799.23664122137404" y="60.563380281690144"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="XrM-d1-DIg">
+            <objects>
+                <viewController id="nAd-en-Qdh" customClass="DetailViewController" customModule="FreeGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NAD-LN-J3F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1601"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Hi-H8-iOF">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="1601"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCu-Gb-rXd" userLabel="Scroll Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1000" id="ICX-be-Nsv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kCu-Gb-rXd" firstAttribute="top" secondItem="udJ-b5-4th" secondAttribute="top" id="2Px-GJ-eQm"/>
+                                    <constraint firstItem="kCu-Gb-rXd" firstAttribute="leading" secondItem="udJ-b5-4th" secondAttribute="leading" id="3pb-T8-phg"/>
+                                    <constraint firstItem="kCu-Gb-rXd" firstAttribute="trailing" secondItem="udJ-b5-4th" secondAttribute="trailing" id="Os5-dx-paX"/>
+                                    <constraint firstItem="kCu-Gb-rXd" firstAttribute="bottom" secondItem="udJ-b5-4th" secondAttribute="bottom" id="bwa-Jd-N2L"/>
+                                    <constraint firstItem="kCu-Gb-rXd" firstAttribute="width" secondItem="4gM-ha-jYB" secondAttribute="width" id="rab-EE-Pdp"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="udJ-b5-4th"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="4gM-ha-jYB"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jr5-on-VpY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Hi-H8-iOF" firstAttribute="top" secondItem="NAD-LN-J3F" secondAttribute="top" id="3gy-gv-l18"/>
+                            <constraint firstAttribute="bottom" secondItem="5Hi-H8-iOF" secondAttribute="bottom" id="Lmw-to-6fK"/>
+                            <constraint firstAttribute="trailing" secondItem="5Hi-H8-iOF" secondAttribute="trailing" id="Ve1-PD-0Ar"/>
+                            <constraint firstItem="5Hi-H8-iOF" firstAttribute="leading" secondItem="NAD-LN-J3F" secondAttribute="leading" id="l0Z-EC-uvr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GCf-ZL-1BT"/>
+                    <size key="freeformSize" width="393" height="1601"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kp6-sR-8GH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780.916030534351" y="60.211267605633807"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fY1-Qp-W9Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zR2-hO-1oy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wk3-6w-357">
+                        <rect key="frame" x="0.0" y="59" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gVf-EO-rUH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOJ-j3-jUW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-127.48091603053435" y="60.563380281690144"/>
         </scene>
@@ -142,6 +230,7 @@
     <color key="tintColor" systemColor="systemPurpleColor"/>
     <resources>
         <image name="desktopcomputer" catalog="system" width="128" height="104"/>
+        <image name="gearshape" catalog="system" width="128" height="128"/>
         <image name="photo.artframe" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
